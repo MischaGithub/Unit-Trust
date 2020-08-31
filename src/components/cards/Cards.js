@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import CardItem from "./CardItem";
+import CardItem2 from "./CardItem2";
 
 const Cards = () => {
   // Cards State
@@ -19,6 +20,7 @@ const Cards = () => {
     const data = await res.json();
 
     setCards(data);
+    console.log(data);
     setLoading(false);
   };
 
@@ -27,7 +29,7 @@ const Cards = () => {
   }
 
   return (
-    <div className="collection">
+    <div className="card-collection">
       {!loading && cards.length === 0 ? (
         <p className="center">No cards to show...</p>
       ) : (

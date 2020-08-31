@@ -6,29 +6,47 @@
 
 .container {
   margin: auto;
-  justify-content: center;
+  justify-content: space-between;
 }
 
-.collection {
+.card-collection {
   margin: auto;
   overflow: hidden;
   display: flex;
   flex-direction: row;
 }
 
+.card-title {
+  margin: auto;
+  font-size: 18px;
+}
+
 svg {
   margin: 2rem;
   position: relative;
+  transform: translate(-40px, -90px);
 }
 
 #unit-trust {
   fill: white;
 }
 
+.card-content {
+  background-color: #2775c9;
+  height: 85px;
+}
+
+.card {
+  width: 23rem;
+}
+
 .heading {
   margin: auto;
+  display: flex;
   font-family: "Roboto", sans-serif;
-  transform: translate(70px, -60px);
+  font-size: 20px;
+  transform: translate(50px, -10px);
+  color: #fff;
   font-weight: lighter;
 }
 
@@ -37,5 +55,9 @@ svg {
   font-size: 14px;
   color: #fff;
   font-weight: lighter;
-  transform: translate(25px, -10px);
+  transform: translate(52px, -12px);
+}
+
+.percentage {
+  transform: translate(30px, 100px);
 }
