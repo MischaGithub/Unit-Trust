@@ -5,21 +5,21 @@ const Cards = () => {
   const [cards, setCards] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
-    getCards();
-    //eslint-disable-next-line
-  }, []);
+  // useEffect(() => {
+  //   getCards();
+  //   //eslint-disable-next-line
+  // }, []);
 
-  // Get Cards
-  const getCards = async () => {
-    setLoading(true);
+  // // Get Cards
+  // const getCards = async () => {
+  //   setLoading(true);
 
-    const res = await fetch("./data.json");
-    const data = await res.json();
+  //   const res = await fetch("./data.json");
+  //   const data = await res.json();
 
-    setCards(data);
-    setLoading(false);
-  };
+  //   setCards(data);
+  //   setLoading(false);
+  // };
 
   return (
     <div className="container">
