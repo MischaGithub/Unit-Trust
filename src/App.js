@@ -14,7 +14,9 @@ const App = () => {
   return (
     <Fragment>
       <Navbar />
-      <Cards />
+      <div className="container">
+        <Cards />
+      </div>
     </Fragment>
   );
 };
