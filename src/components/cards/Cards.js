@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import CardItem from "./CardItem";
 
 const Cards = () => {
   // Cards State
@@ -26,16 +27,13 @@ const Cards = () => {
   }
 
   return (
-    <ul className="collection with-header">
-      <li className="collection-header">
-        <h4>Cards</h4>
-      </li>
+    <div className="collection">
       {!loading && cards.length === 0 ? (
         <p className="center">No cards to show...</p>
       ) : (
-        cards.map((card) => <li>{card.status}</li>)
+        cards.map((card) => <CardItem card={card} key={card.productId} />)
       )}
-    </ul>
+    </div>
   );
 };
 
