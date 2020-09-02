@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import CardItem from "./CardItem";
-import CardItem2 from "./CardItem2";
+import CardItemOne from "./CardItemOne";
+import CardItemTwo from "./CardItemTwo";
+import CardItemThree from "./CardItemThree";
 
 const Cards = () => {
   // Cards State
@@ -20,7 +21,6 @@ const Cards = () => {
     const data = await res.json();
 
     setCards(data);
-    console.log(data);
     setLoading(false);
   };
 
@@ -33,7 +33,12 @@ const Cards = () => {
       {!loading && cards.length === 0 ? (
         <p className="center">No cards to show...</p>
       ) : (
-        cards.map((card) => <CardItem card={card} key={card.productId} />)
+        cards.map(
+          (card, index) =>
+            (index === 0 && <CardItemOne card={card} key={card.productId} />) ||
+            (index === 1 && <CardItemTwo card={card} key={card.productId} />) ||
+            (index === 2 && <CardItemThree card={card} key={card.productId} />)
+        )
       )}
     </div>
   );

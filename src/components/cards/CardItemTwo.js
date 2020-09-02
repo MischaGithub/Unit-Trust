@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const CardItem = ({ card }) => {
+const CardItemTwo = ({ card }) => {
   return (
     <div className="container">
       <a href="#!">{card.status}</a>
@@ -40,9 +40,6 @@ const CardItem = ({ card }) => {
               {card.percentageComplete}%
             </text>
           </svg>
-          <p>
-            Almost there! {card.percentageComplete} done with your application.
-          </p>
         </div>
         <div className="card-action">
           <a href="#!">This is a link</a>
@@ -53,8 +50,8 @@ const CardItem = ({ card }) => {
   );
 };
 
-CardItem.propTypes = {
+CardItemTwo.propTypes = {
   card: PropTypes.object.isRequired,
 };
 
-export default CardItem;
+export default CardItemTwo;

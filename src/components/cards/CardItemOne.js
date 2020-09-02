@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const CardItem2 = ({ card }) => {
+const CardItemOne = ({ card }) => {
   return (
     <div className="container">
       <a href="#!">{card.status}</a>
@@ -53,8 +53,8 @@ const CardItem2 = ({ card }) => {
   );
 };
 
-CardItem2.propTypes = {
+CardItemOne.propTypes = {
   card: PropTypes.object.isRequired,
 };
 
-export default CardItem2;
+export default CardItemOne;
