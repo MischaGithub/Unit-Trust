@@ -40,18 +40,29 @@ const CardItemThree = ({ card }) => {
               Almost there! <strong>{card.percentageComplete}% </strong>done
               with your application
             </p>
+            <hr />
             <p className="app-info-1">
-              Pick up where you left of or
+              Pick up where you left off or
               <button className="btn-cancel">
-                Cancel
-                <i className="fa fa-times" aria-hidden="true" />
+                CANCEL
+                <i className="fas fa-times-circle" />
               </button>
             </p>
           </div>
         </div>
-        <div className="card-action">
-          <a href="#!">This is a link</a>
-          <a href="#!">This is a link</a>
+
+        <div className="second-section">
+          <hr />
+          <p className="updated">
+            Last updated: <p className="updated-date">{card.updatedDate}</p>
+          </p>
+          <p className="updated">
+            Total funds: <p className="updated-date">{card.funds.length}</p>
+          </p>
+        </div>
+        <div className="resume-app">
+          <hr />
+          <button className="btn-resume">RESUME APPLICATION</button>
         </div>
       </div>
     </div>

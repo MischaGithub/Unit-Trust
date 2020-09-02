@@ -21,6 +21,7 @@ const Cards = () => {
     const data = await res.json();
 
     setCards(data);
+
     setLoading(false);
   };
 

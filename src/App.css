@@ -40,7 +40,7 @@ svg {
 .percentage {
   font-weight: bolder;
   fill: #2775c9;
-  transform: translate(-10px, -10px);
+  transform: translate(-20px, -10px);
 }
 
 .card-content {
@@ -49,7 +49,8 @@ svg {
 }
 
 .card {
-  width: 25rem;
+  width: 24rem;
+  height: 33.5rem;
 }
 
 .heading {
@@ -79,7 +80,7 @@ svg {
   display: flex;
   position: relative;
   flex-direction: column;
-  transform: translate(-20px);
+  transform: translate(-40px);
 }
 
 .app-info {
@@ -88,7 +89,7 @@ svg {
   font-family: "Roboto", sans-serif;
   font-size: 1.13rem;
   font-weight: normal;
-  color: #a7a8a9;
+  color: #9d9e9f;
 }
 
 .app-info-1 {
@@ -96,10 +97,62 @@ svg {
   width: 200px;
   font-family: "Roboto", sans-serif;
   font-size: 1.15rem;
-  color: #a7a8a9;
+  color: #9d9e9f;
 }
 
 .btn-cancel {
+  margin: auto 0.3rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 14.5px;
+  color: #2775c9;
+  padding: 0.2rem;
+  border-radius: 12px;
+  border: 1px solid #ebebeb;
+  width: 100px;
+}
+
+.btn-cancel i {
+  margin: auto 0.3rem;
+}
+
+.second-section {
+  margin: auto 1rem;
+}
+
+.updated {
+  margin: auto 0.5rem;
+  margin-top: 0.8rem;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  color: #949496;
+  font-size: 1.1rem;
+  width: 120px;
+}
+
+.updated-date {
+  color: #2775c9;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.resume-app {
+  margin: auto 1rem;
+  margin-top: 0.5rem;
+}
+
+.btn-resume {
   margin: auto;
-  width: 80px;
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #2775c9;
+  padding: 0.5rem;
+  border-radius: 20px;
+  border: 1px solid #ebebeb;
+  width: 200px;
+  height: 40px;
+  transform: translate(70px);
 }
