@@ -21,6 +21,8 @@
   font-size: 18px;
 }
 
+/* SVG STYLING*/
+
 svg {
   margin: 2rem;
   position: relative;
@@ -31,13 +33,23 @@ svg {
   fill: white;
 }
 
+#tax-free {
+  fill: white;
+}
+
+.percentage {
+  font-weight: bolder;
+  fill: #2775c9;
+  transform: translate(-10px, -10px);
+}
+
 .card-content {
   background-color: #2775c9;
   height: 85px;
 }
 
 .card {
-  width: 23rem;
+  width: 25rem;
 }
 
 .heading {
@@ -58,6 +70,36 @@ svg {
   transform: translate(52px, -12px);
 }
 
-.percentage {
-  transform: translate(30px, 100px);
+.state-percentage {
+  display: flex;
+}
+
+.state-app {
+  margin: 1rem auto;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  transform: translate(-20px);
+}
+
+.app-info {
+  margin: 0.5rem auto;
+  width: 200px;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.13rem;
+  font-weight: normal;
+  color: #a7a8a9;
+}
+
+.app-info-1 {
+  margin: 0.5rem auto;
+  width: 200px;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.15rem;
+  color: #a7a8a9;
+}
+
+.btn-cancel {
+  margin: auto;
+  width: 80px;
 }
