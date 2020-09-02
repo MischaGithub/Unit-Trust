@@ -1,11 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 
 const CardItemTwo = ({ card }) => {
+  const percentage = 70;
   return (
     <div className="container">
       <a href="#!">{card.status}</a>
-      <div className="card blue-grey darken-1">
+      <div className="card ">
         <div className="card-content">
           <p className="heading">{card.productLabel}</p>
           <p className="sub-heading">Investor code: {card.accountGroupId}</p>
@@ -23,23 +25,33 @@ const CardItemTwo = ({ card }) => {
             </svg>
           </div>
         </div>
-        <div>
-          <svg className="percentage" viewbox="0 0 52 52">
-            <circle cx="50" cy="50" r="45" fill="#FDB900" />
-            <path
-              fill="none"
-              stroke-linecap="round"
-              stroke-width="5"
-              stroke="#fff"
-              stroke-dasharray="125.6,125.6"
-              d="M50 10
-           a 40 40 0 0 1 0 80
-           a 40 40 0 0 1 0 -80"
-            />
-            <text x="50" y="50" text-anchor="middle" dy="7" font-size="20">
-              {card.percentageComplete}%
-            </text>
-          </svg>
+        <div className="progress-ring">
+          <CircularProgressbar
+            value={percentage}
+            text={`${card.percentageComplete}%`}
+            styles={buildStyles({
+              // Rotation of path and trail, in number of turns (0-1)
+              rotation: 0.65,
+
+              // Whether to use rounded or flat corners on the ends - can use 'butt' or 'round'
+              strokeLinecap: "butt",
+
+              // Text size
+              textSize: "15px",
+
+              // How long animation takes to go from one percentage to another, in seconds
+              pathTransitionDuration: 0.5,
+
+              // Can specify path transition in more detail, or remove it entirely
+              // pathTransition: 'none',
+
+              // Colors
+              pathColor: `rgba(62, 152, 199, ${card.percentageComplete / 100})`,
+              textColor: "#2775c9",
+              trailColor: "#fff",
+              backgroundColor: "#3e98c7",
+            })}
+          />
         </div>
         <div className="card-action">
           <a href="#!">This is a link</a>

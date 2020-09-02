@@ -156,3 +156,24 @@ svg {
   height: 40px;
   transform: translate(70px);
 }
+
+/* PERCENTAGE CIRCLE STYLE */
+
+.progress-ring {
+  width: 160px;
+  font-weight: bold;
+  transform: translate(40px, 90px);
+}
+
+.CircularProgressbar-path {
+  stroke: #2775c9;
+}
+.CircularProgressbar-trail {
+  stroke: gray;
+}
+.CircularProgressbar-text {
+  fill: yellow;
+}
+.CircularProgressbar-background {
+  fill: green;
+}

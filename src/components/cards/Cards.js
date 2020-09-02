@@ -36,7 +36,10 @@ const Cards = () => {
       ) : (
         cards.map(
           (card, index) =>
-            index === 2 && <CardItemThree card={card} key={card.productId} />
+            (index === 2 && (
+              <CardItemThree card={card} key={card.productId} />
+            )) ||
+            (index === 1 && <CardItemTwo card={card} key={card.productId} />)
         )
       )}
     </div>
