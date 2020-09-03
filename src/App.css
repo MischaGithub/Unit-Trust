@@ -6,12 +6,8 @@
 
 .container {
   margin: auto;
-  justify-content: space-between;
-}
-
-.card-collection {
-  margin: auto;
-  overflow: hidden;
+  margin-top: 1rem;
+  justify-content: space-evenly;
   display: flex;
   flex-direction: row;
 }
@@ -37,10 +33,12 @@ svg {
   fill: white;
 }
 
-.percentage {
-  font-weight: bolder;
-  fill: #2775c9;
-  transform: translate(-20px, -10px);
+.progress-ring {
+  width: 160px;
+  height: 48px;
+  font-weight: normal;
+  justify-content: center;
+  transform: translate(30px, 50px);
 }
 
 .card-content {
@@ -50,7 +48,7 @@ svg {
 
 .card {
   width: 24rem;
-  height: 33.5rem;
+  height: 34rem;
 }
 
 .heading {
@@ -71,18 +69,6 @@ svg {
   transform: translate(52px, -12px);
 }
 
-.state-percentage {
-  display: flex;
-}
-
-.state-app {
-  margin: 1rem auto;
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  transform: translate(-40px);
-}
-
 .app-info {
   margin: 0.5rem auto;
   width: 200px;
@@ -100,6 +86,16 @@ svg {
   color: #9d9e9f;
 }
 
+.incomplete-com {
+  color: #2775c9;
+  transform: translate(15px, 10px);
+}
+
+.incomplete-per {
+  font-weight: bolder;
+  font-size: 1.8rem;
+}
+
 .btn-cancel {
   margin: auto 0.3rem;
   font-family: "Roboto", sans-serif;
@@ -107,7 +103,7 @@ svg {
   font-size: 14.5px;
   color: #2775c9;
   padding: 0.2rem;
-  border-radius: 12px;
+  border-radius: 15px;
   border: 1px solid #ebebeb;
   width: 100px;
 }
@@ -157,12 +153,48 @@ svg {
   transform: translate(70px);
 }
 
-/* PERCENTAGE CIRCLE STYLE */
+/* Second Card (Pending) */
 
 .progress-ring {
   width: 160px;
-  font-weight: bold;
-  transform: translate(40px, 90px);
+  height: 48px;
+  font-weight: normal;
+  justify-content: center;
+  transform: translate(30px, 50px);
+}
+
+.pending-com {
+  color: #2775c9;
+  transform: translate(5px, 10px);
+}
+
+.pending-per {
+  font-weight: bolder;
+  font-size: 1.8rem;
+}
+
+.pending-app {
+  margin: 1rem auto;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  transform: translate(60px, -50px);
+  width: 200px;
+}
+
+.pending-info {
+  margin: auto 1.3rem;
+}
+
+.submitted {
+  margin: auto 0.5rem;
+  margin-top: 0.8rem;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  color: #949496;
+  font-size: 1.2rem;
+  width: 180px;
 }
 
 .CircularProgressbar-path {

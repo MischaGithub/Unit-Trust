@@ -21,7 +21,6 @@ const Cards = () => {
     const data = await res.json();
 
     setCards(data);
-
     setLoading(false);
   };
 
@@ -30,7 +29,7 @@ const Cards = () => {
   }
 
   return (
-    <div className="card-collection">
+    <div className="container">
       {!loading && cards.length === 0 ? (
         <p className="center">No cards to show...</p>
       ) : (
@@ -39,7 +38,8 @@ const Cards = () => {
             (index === 2 && (
               <CardItemThree card={card} key={card.productId} />
             )) ||
-            (index === 1 && <CardItemTwo card={card} key={card.productId} />)
+            (index === 1 && <CardItemTwo card={card} key={card.productId} />) ||
+            (index === 0 && <CardItemOne card={card} key={card.productId} />)
         )
       )}
     </div>

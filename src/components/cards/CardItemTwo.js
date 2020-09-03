@@ -26,18 +26,17 @@ const CardItemTwo = ({ card }) => {
           </div>
         </div>
         <div className="progress-ring">
+          <div className="pending-com">
+            <span className="pending-per">{card.percentageComplete}%</span>
+          </div>
           <CircularProgressbar
             value={percentage}
-            text={`${card.percentageComplete}%`}
             styles={buildStyles({
               // Rotation of path and trail, in number of turns (0-1)
               rotation: 0.65,
 
               // Whether to use rounded or flat corners on the ends - can use 'butt' or 'round'
               strokeLinecap: "butt",
-
-              // Text size
-              textSize: "15px",
 
               // How long animation takes to go from one percentage to another, in seconds
               pathTransitionDuration: 0.5,
@@ -46,16 +45,30 @@ const CardItemTwo = ({ card }) => {
               // pathTransition: 'none',
 
               // Colors
-              pathColor: `rgba(62, 152, 199, ${card.percentageComplete / 100})`,
-              textColor: "#2775c9",
+              pathColor: `#2775c9, ${card.percentageComplete / 100})`,
               trailColor: "#fff",
               backgroundColor: "#3e98c7",
             })}
           />
         </div>
-        <div className="card-action">
-          <a href="#!">This is a link</a>
-          <a href="#!">This is a link</a>
+        <div className="pending-app">
+          <p className="app-info">
+            Well done! We have all the information we need.
+          </p>
+          <hr />
+          <p className="app-info-1">Your investment is currently pending.</p>
+        </div>
+
+        <div className="pending-info">
+          <hr />
+          <p className="submitted">
+            Application submitted:
+            <p className="updated-date">{card.updatedDate}</p>
+          </p>
+          <p className="submitted">
+            Total funds: <p className="updated-date">{card.funds.length}</p>
+          </p>
+          <hr />
         </div>
       </div>
     </div>

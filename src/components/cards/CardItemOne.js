@@ -2,6 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const CardItemOne = ({ card }) => {
+  const units = card.totalUnits;
+
   return (
     <div className="container">
       <a href="#!">{card.status}</a>
@@ -23,29 +25,9 @@ const CardItemOne = ({ card }) => {
             </svg>
           </div>
         </div>
-        <div>
-          <svg className="percentage" viewbox="0 0 52 52">
-            <circle cx="50" cy="50" r="45" fill="#FDB900" />
-            <path
-              fill="none"
-              stroke-linecap="round"
-              stroke-width="5"
-              stroke="#fff"
-              stroke-dasharray="125.6,125.6"
-              d="M50 10
-           a 40 40 0 0 1 0 80
-           a 40 40 0 0 1 0 -80"
-            />
-            <text x="50" y="50" text-anchor="middle" dy="7" font-size="20">
-              {card.percentageComplete}%
-            </text>
-          </svg>
-          <p>
-            Almost there! {card.percentageComplete} done with your application.
-          </p>
-        </div>
+        <div></div>
         <div className="card-action">
-          <a href="#!">This is a link</a>
+          <p href="#!">{card.funds.totalUnits}</p>
           <a href="#!">This is a link</a>
         </div>
       </div>

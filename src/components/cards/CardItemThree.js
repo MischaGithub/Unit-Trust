@@ -1,7 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 
 const CardItemThree = ({ card }) => {
+  const percentage = 35;
   return (
     <div className="container">
       <a href="#!">{card.status}</a>
@@ -18,45 +20,53 @@ const CardItemThree = ({ card }) => {
             </svg>
           </div>
         </div>
-        <div className="state-percentage">
-          <svg className="percentage" viewbox="0 0 52 52">
-            <circle cx="50" cy="50" r="45" fill="#fff" />
-            <path
-              fill="none"
-              stroke-linecap="round"
-              stroke-width="5"
-              stroke="#f59a1b"
-              stroke-dasharray="125.6,125.6"
-              d="M50 10
-           a 40 40 0 0 1 0 80
-           a 40 40 0 0 1 0 -80"
-            />
-            <text x="50" y="50" text-anchor="middle" dy="7" font-size="20">
-              {card.percentageComplete}%
-            </text>
-          </svg>
-          <div className="state-app">
-            <p className="app-info">
-              Almost there! <strong>{card.percentageComplete}% </strong>done
-              with your application
-            </p>
-            <hr />
-            <p className="app-info-1">
-              Pick up where you left off or
-              <button className="btn-cancel">
-                CANCEL
-                <i className="fas fa-times-circle" />
-              </button>
-            </p>
+        <div className="progress-ring">
+          <div className="incomplete-com">
+            <span className="incomplete-per">{card.percentageComplete}%</span>
           </div>
+          <CircularProgressbar
+            value={percentage}
+            styles={buildStyles({
+              // Rotation of path and trail, in number of turns (0-1)
+              rotation: 0.6,
+
+              // Whether to use rounded or flat corners on the ends - can use 'butt' or 'round'
+              strokeLinecap: "butt",
+
+              // How long animation takes to go from one percentage to another, in seconds
+              pathTransitionDuration: 0.5,
+
+              // Can specify path transition in more detail, or remove it entirely
+              // pathTransition: 'none',
+
+              // Colors
+              pathColor: `#2775c9, ${card.percentageComplete / 100})`,
+              trailColor: "white",
+              backgroundColor: "#3e98c7",
+            })}
+          />
+        </div>
+        <div className="pending-app">
+          <p className="app-info">
+            Almost there! {card.percentageComplete}% done with your application
+          </p>
+          <hr />
+          <p className="app-info-1">
+            Pick up where your left off or
+            <button className="btn-cancel">
+              CANCEL
+              <i className="fas fa-times-circle" />
+            </button>
+          </p>
         </div>
 
-        <div className="second-section">
+        <div className="pending-info">
           <hr />
-          <p className="updated">
-            Last updated: <p className="updated-date">{card.updatedDate}</p>
+          <p className="submitted">
+            Last updated:
+            <p className="updated-date">{card.updatedDate}</p>
           </p>
-          <p className="updated">
+          <p className="submitted">
             Total funds: <p className="updated-date">{card.funds.length}</p>
           </p>
         </div>
