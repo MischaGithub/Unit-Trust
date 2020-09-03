@@ -1,8 +1,26 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { scryRenderedComponentsWithType } from "react-dom/test-utils";
 
 const CardItemOne = ({ card }) => {
-  const units = card.totalUnits;
+  const getUnits = card.funds.map((unitInfo) => {
+    let amnt = 0;
+    amnt += unitInfo.totalUnits;
+
+    return amnt;
+  });
+
+  const reducer = (accumulator, currentValue) => accumulator + currentValue;
+
+  const subUnits = getUnits.reduce(reducer);
+
+  const totalAvail = card.availableMarketValue - subUnits;
+
+  const customerAmount = Math.floor(totalAvail * 100) / 100;
+
+  const totalValue = Math.floor(card.availableMarketValue * 100) / 100;
+
+  console.log(totalValue);
 
   return (
     <div className="container">
@@ -27,8 +45,15 @@ const CardItemOne = ({ card }) => {
         </div>
         <div></div>
         <div className="card-action">
-          <p href="#!">{card.funds.totalUnits}</p>
-          <a href="#!">This is a link</a>
+          <div className="total-info">
+            <p className="present">
+              Last updated:
+              <p className="updated-date">{totalValue}</p>
+            </p>
+            <p className="present">
+              Total funds: <p className="updated-date">{card.funds.length}</p>
+            </p>
+          </div>
         </div>
       </div>
     </div>
