@@ -235,7 +235,7 @@ svg {
 .info-svg {
   width: 20px;
   height: 10px;
-  transform: translate(111px, 140px);
+  transform: translate(111px, 145px);
 }
 
 #info {
@@ -279,4 +279,288 @@ svg {
 .right {
   font-weight: bold;
   margin: auto 2rem;
+}
+
+@media (max-width: 1080px) {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    margin: auto;
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .card-title {
+    margin: auto;
+    font-size: 18px;
+  }
+
+  /* SVG STYLING*/
+
+  svg {
+    margin: 2rem;
+    position: relative;
+    transform: translate(-40px, -90px);
+  }
+
+  #unit-trust {
+    fill: white;
+  }
+
+  #tax-free {
+    fill: white;
+  }
+
+  .progress-ring {
+    width: 160px;
+    height: 48px;
+    font-weight: normal;
+    justify-content: center;
+    transform: translate(30px, 50px);
+  }
+
+  .card-content {
+    background-color: #2775c9;
+    height: 85px;
+  }
+
+  .card {
+    width: 22rem;
+    height: 34rem;
+  }
+
+  .heading {
+    margin: auto;
+    display: flex;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    transform: translate(50px, -10px);
+    color: #fff;
+    font-weight: lighter;
+  }
+
+  .sub-heading {
+    margin: auto;
+    font-size: 14px;
+    color: #fff;
+    font-weight: lighter;
+    transform: translate(52px, -12px);
+  }
+
+  .app-info {
+    margin: 0.5rem auto;
+    width: 200px;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.13rem;
+    font-weight: normal;
+    color: #9d9e9f;
+  }
+
+  .app-info-1 {
+    margin: 0.5rem auto;
+    width: 200px;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.15rem;
+    color: #9d9e9f;
+  }
+
+  .incomplete-com {
+    color: #2775c9;
+    transform: translate(15px, 10px);
+  }
+
+  .incomplete-per {
+    font-weight: bolder;
+    font-size: 1.8rem;
+  }
+
+  .btn-cancel {
+    margin: auto 0.3rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    font-size: 14.5px;
+    color: #2775c9;
+    padding: 0.2rem;
+    border-radius: 15px;
+    border: 1px solid #ebebeb;
+    width: 100px;
+  }
+
+  .btn-cancel i {
+    margin: auto 0.3rem;
+  }
+
+  .second-section {
+    margin: auto 1rem;
+  }
+
+  .updated {
+    margin: auto 0.5rem;
+    margin-top: 0.8rem;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    color: #949496;
+    font-size: 1.1rem;
+    width: 120px;
+  }
+
+  .updated-date {
+    color: #2775c9;
+    font-weight: bold;
+    font-size: 1.4rem;
+  }
+
+  .resume-app {
+    margin: auto 1rem;
+    margin-top: 0.5rem;
+  }
+
+  .btn-resume {
+    margin: auto;
+    margin-top: 0.8rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #2775c9;
+    padding: 0.5rem;
+    border-radius: 20px;
+    border: 1px solid #ebebeb;
+    width: 200px;
+    height: 40px;
+    transform: translate(70px);
+  }
+
+  /* Second Card (Pending) */
+
+  .progress-ring {
+    width: 160px;
+    height: 48px;
+    font-weight: normal;
+    justify-content: center;
+    transform: translate(30px, 50px);
+  }
+
+  .pending-com {
+    color: #2775c9;
+    transform: translate(5px, 10px);
+  }
+
+  .pending-per {
+    font-weight: bolder;
+    font-size: 1.8rem;
+  }
+
+  .pending-app {
+    margin: 1rem auto;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    transform: translate(60px, -50px);
+    width: 200px;
+  }
+
+  .pending-info {
+    margin: auto 1.3rem;
+  }
+
+  .submitted {
+    margin: auto 0.5rem;
+    margin-top: 0.8rem;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    color: #949496;
+    font-size: 1.2rem;
+    width: 180px;
+  }
+
+  .CircularProgressbar-path {
+    stroke: #2775c9;
+  }
+
+  .CircularProgressbar-path-Two {
+    stroke: #f7b15b;
+  }
+
+  .CircularProgressbar-trail {
+    stroke: gray;
+    stroke: #f7b15b;
+  }
+  .CircularProgressbar-text {
+    fill: yellow;
+  }
+  .CircularProgressbar-background {
+    fill: green;
+  }
+
+  /* Open Card */
+
+  .open-card {
+    margin: auto 1rem;
+  }
+
+  .present {
+    margin: auto 0.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    color: #949496;
+  }
+
+  .info-svg {
+    width: 20px;
+    height: 10px;
+    transform: translate(111px, 145px);
+  }
+
+  #info {
+    fill: #5bbeae;
+  }
+
+  .present-since {
+    margin: auto 0.5rem;
+    color: #949496;
+  }
+
+  .date {
+    font-weight: bold;
+    color: #2775c9;
+  }
+
+  .logo {
+    margin: auto 1rem;
+    transform: translateY(110px);
+  }
+
+  .btn-view {
+    margin: auto;
+    margin-top: 0.8rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #2775c9;
+    padding: 0.5rem;
+    border-radius: 30px;
+    border: 1px solid #ebebeb;
+    width: 200px;
+    height: 45px;
+    transform: translate(70px, 10px);
+  }
+
+  .nav-logo {
+    transform: translate(30px, 10px);
+  }
+
+  .right {
+    font-weight: bold;
+    margin: auto 2rem;
+  }
 }
