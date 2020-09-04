@@ -200,12 +200,54 @@ svg {
 .CircularProgressbar-path {
   stroke: #2775c9;
 }
+
+.CircularProgressbar-path-Two {
+  stroke: #f7b15b;
+}
+
 .CircularProgressbar-trail {
   stroke: gray;
+  stroke: #f7b15b;
 }
 .CircularProgressbar-text {
   fill: yellow;
 }
 .CircularProgressbar-background {
   fill: green;
+}
+
+/* Open Card */
+
+.open-card {
+  margin: auto 1rem;
+}
+
+.present {
+  margin: auto 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  color: #949496;
+}
+
+.info-svg {
+  width: 20px;
+  height: 10px;
+  transform: translate(111px, 140px);
+}
+
+#info {
+  fill: #5bbeae;
+}
+
+.present-since {
+  margin: auto 0.5rem;
+  color: #949496;
+}
+
+.date {
+  font-weight: bold;
+  color: #2775c9;
 }

@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { scryRenderedComponentsWithType } from "react-dom/test-utils";
 
 const CardItemOne = ({ card }) => {
+  // Getting the individual objects with the total unit prices
   const getUnits = card.funds.map((unitInfo) => {
     let amnt = 0;
     amnt += unitInfo.totalUnits;
@@ -10,22 +10,25 @@ const CardItemOne = ({ card }) => {
     return amnt;
   });
 
+  // Calculating the sum the values of the total unit price
   const reducer = (accumulator, currentValue) => accumulator + currentValue;
 
   const subUnits = getUnits.reduce(reducer);
 
+  // Return the total available for the user
   const totalAvail = card.availableMarketValue - subUnits;
 
+  // Just rounding off the amount to a 2 decimal digit
   const customerAmount = Math.floor(totalAvail * 100) / 100;
 
+  // Rounding off the total value
   const totalValue = Math.floor(card.availableMarketValue * 100) / 100;
 
-  console.log(totalValue);
-
   return (
+    // Open card
     <div className="container">
       <a href="#!">{card.status}</a>
-      <div className="card blue-grey darken-1">
+      <div className="card">
         <div className="card-content">
           <p className="heading">{card.productLabel}</p>
           <p className="sub-heading">Investor code: {card.accountGroupId}</p>
@@ -43,15 +46,43 @@ const CardItemOne = ({ card }) => {
             </svg>
           </div>
         </div>
-        <div></div>
-        <div className="card-action">
+        <div className="open-card">
           <div className="total-info">
+            <div className="info-svg">
+              <svg
+                width="40px"
+                height="20px"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  id="info"
+                  d="M10,0A10,10,0,1,0,20,10,10,10,0,0,0,10,0Zm1,15H9V8h2ZM10,7a1,1,0,1,1,1-1A1,1,0,0,1,10,7Z"
+                />
+              </svg>
+            </div>
             <p className="present">
-              Last updated:
-              <p className="updated-date">{totalValue}</p>
+              Total value:
+              <p className="updated-date">R{totalValue}</p>
+            </p>
+            <p className="present">
+              Total available: <p className="updated-date">R{customerAmount}</p>
             </p>
             <p className="present">
               Total funds: <p className="updated-date">{card.funds.length}</p>
+            </p>
+
+            <p
+              className="present-since"
+              style={{ float: "left", marginRight: "1rem" }}
+            >
+              Investing since:
+              <p
+                className="date"
+                style={{ float: "right", marginLeft: "1rem" }}
+              >
+                {card.inceptionDate}
+              </p>
             </p>
           </div>
         </div>
