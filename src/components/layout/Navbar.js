@@ -1,13 +1,12 @@
 import React from "react";
+import Logo from "../../portfolio-managers/sanlam.png";
 
 const Navbar = () => {
   return (
-    <nav style={{ marginBottom: "30px", backgroundColor: "#2775c9" }}>
+    <nav style={{ marginBottom: "30px", backgroundColor: "#000" }}>
       <div className="nav-wrapper">
-        <a href="#!" className="brand-logo">
-          Sanlam Unit Trust
-        </a>
-        <ul className="right hide-on-med-and-down">
+        <img src={Logo} alt="img " className="nav-logo" />
+        <ul className="right">
           <li>
             <a href="#!">Personal</a>
           </li>

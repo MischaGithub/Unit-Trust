@@ -13,7 +13,6 @@ const CardItemTwo = ({ card }) => {
 
   return (
     <div className="container">
-      <a href="#!">{card.status}</a>
       <div className="card ">
         <div className="card-content">
           <p className="heading">{card.productLabel}</p>
