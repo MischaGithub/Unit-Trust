@@ -24,6 +24,12 @@ const CardItemOne = ({ card }) => {
   // Rounding off the total value
   const totalValue = Math.floor(card.availableMarketValue * 100) / 100;
 
+  // Date format
+
+  const date = new Date(card.inceptionDate);
+
+  const formatteDate = date.toDateString();
+
   return (
     // Open card
     <div className="container">
@@ -61,6 +67,7 @@ const CardItemOne = ({ card }) => {
                 />
               </svg>
             </div>
+
             <p className="present">
               Total value:
               <p className="updated-date">R{totalValue}</p>
@@ -81,10 +88,14 @@ const CardItemOne = ({ card }) => {
                 className="date"
                 style={{ float: "right", marginLeft: "1rem" }}
               >
-                {card.inceptionDate}
+                {formatteDate}
               </p>
             </p>
           </div>
+        </div>
+        <div className="">
+          <hr className="logo" />
+          <button className="btn-view">View Fund</button>
         </div>
       </div>
     </div>

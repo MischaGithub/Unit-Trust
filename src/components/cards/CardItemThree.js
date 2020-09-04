@@ -4,6 +4,13 @@ import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 
 const CardItemThree = ({ card }) => {
   const percentage = 35;
+
+  // Date format
+
+  const date = new Date(card.updatedDate);
+
+  const formatteDate = date.toDateString();
+
   return (
     <div className="container">
       <a href="#!">{card.status}</a>
@@ -64,7 +71,7 @@ const CardItemThree = ({ card }) => {
           <hr />
           <p className="submitted">
             Last updated:
-            <p className="updated-date">{card.updatedDate}</p>
+            <p className="updated-date">{formatteDate}</p>
           </p>
           <p className="submitted">
             Total funds: <p className="updated-date">{card.funds.length}</p>
